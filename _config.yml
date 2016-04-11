@@ -61,7 +61,7 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
-disqus_shortname: wish007
+duoshuo_shortname: wish007
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
