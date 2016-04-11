@@ -1,0 +1,2 @@
+#忽略hexo下的.deploy_git文件夹
+.deploy_git/
