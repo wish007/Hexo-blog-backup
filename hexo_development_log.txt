@@ -11,8 +11,11 @@ hexo/hexo_development_log.txt
 添加.gitignore文件用于忽略hexo文件夹中不需要跟踪的文件：
 hexo/.gitignore
 
-添加index.md页面用于显示标签tags页：
+添加标签tags页面：
 hexo/source/tags/index.md
+
+添加分类categories页面：
+hexo/source/categories/index.md
 
 保存文章的目录：
 hexo/source/_posts
