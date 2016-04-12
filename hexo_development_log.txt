@@ -1,15 +1,18 @@
-ĞŞ¸Ä£º
+ä¿®æ”¹ï¼š
 hexo/_config.yml
 hexo/themes/hexo-theme-next/_config.yml
 
-Ìí¼ÓÓÃ»§Í·Ïñ£º
+æ·»åŠ ç”¨æˆ·å¤´åƒï¼š
 hexo/themes/hexo-theme-next/source/images/avatar.jpg
 
-Ìí¼Óhexo_development_log.txtÎÄ¼ş±£´æhexo²©¿Í×öÁËÄÄĞ©ÅäÖÃ£º
+æ·»åŠ hexo_development_log.txtæ–‡ä»¶ä¿å­˜hexoåšå®¢åšäº†å“ªäº›é…ç½®ï¼š
 hexo/hexo_development_log.txt
 
-Ìí¼Ó.gitignoreÎÄ¼şÓÃÓÚºöÂÔhexoÎÄ¼ş¼ĞÖĞ²»ĞèÒª¸ú×ÙµÄÎÄ¼ş£º
+æ·»åŠ .gitignoreæ–‡ä»¶ç”¨äºå¿½ç•¥hexoæ–‡ä»¶å¤¹ä¸­ä¸éœ€è¦è·Ÿè¸ªçš„æ–‡ä»¶ï¼š
 hexo/.gitignore
 
-±£´æÎÄÕÂµÄÄ¿Â¼£º
+æ·»åŠ index.mdé¡µé¢ç”¨äºæ˜¾ç¤ºæ ‡ç­¾tagsé¡µï¼š
+hexo/source/tags/index.md
+
+ä¿å­˜æ–‡ç« çš„ç›®å½•ï¼š
 hexo/source/_posts
