@@ -1,10 +1,11 @@
 ---
-title: 在博客中插入图片
+title: 在Hexo中插入图片
 date: 2016-09-05 00:55:19
 categories: Hexo
 tags:
 - Hexo
 ---
+
 # 最简便的方法
 
 如果你的Hexo项目中只有少量图片，那最简单的方法就是将图片放在`source/images` 文件夹中；然后在文章中通过类似于 `![](/images/image.jpg)` 的方法访问它们；但是当文章多了以后，这种方式显然不便于管理文章中图片。
