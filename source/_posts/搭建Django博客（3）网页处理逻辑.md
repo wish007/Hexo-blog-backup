@@ -3,6 +3,7 @@ title: 搭建Django博客（3）网页处理逻辑
 date: 2016-09-05 21:18:32
 categories: Django
 tags:
+- Django
 ---
 
 # 网页程序的逻辑
@@ -12,6 +13,10 @@ tags:
 {% asset_img flow.png Django 请求处理流程 %}
 
 request 进来-->`urls.py`根据 url 指配处理函数-->`views.py`处理 request 请求-->返回 response
+
+
+<!--more-->
+
 
 # URL 调度器 urls.py
 

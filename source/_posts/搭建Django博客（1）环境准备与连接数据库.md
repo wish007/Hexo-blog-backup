@@ -3,6 +3,7 @@ title: 搭建Django博客（1）环境准备与连接数据库
 date: 2016-09-05 18:46:00
 categories: Django
 tags:
+- Django
 ---
 
 # 环境准备
@@ -15,6 +16,10 @@ tags:
 $ virtualenv [虚拟环境名]
 $ pip install django
 ```
+
+
+<!--more-->
+
 
 - 在 PyCharm 中创建 Django 项目，并选择刚刚创建的虚拟环境为其解释器，完成后将在指定目录生成 Django 基本目录及文件。
 - 当然，也可以使用 CMD 命令行创建 Django 项目（我创建的项目名是：myblog）：

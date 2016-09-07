@@ -3,6 +3,7 @@ title: 搭建Django博客（6）代码高亮及后台Markdown编辑器
 date: 2016-09-05 21:32:17
 categories: Django
 tags:
+- Django
 ---
 
 
@@ -14,6 +15,8 @@ tags:
 ```powershell
 $ pip install Pygments
 ```
+
+<!--more-->
 
 
 将 pygments 的 css 主题文件放到七牛云，可享受 CDN 加速，并在 base.html 的`<head>` `</head>`之间加入`<link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">`

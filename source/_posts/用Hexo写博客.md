@@ -25,6 +25,10 @@ hexo n "文章标题"
 ```
 执行命令后会在 `Hexo/source/_posts` 文件夹生成 `文章标题.md` 的文件，再用编辑器打开编写；当然也可以直接在该目录创建 Markdown 文件。
 
+
+<!--more-->
+
+
 **生成 Hexo 博客静态文件**
 
 ``` bash
@@ -45,7 +49,7 @@ hexo s
 
 **将博客部署到 GitHub**
 
-部署前要编辑 Hexo 站点配置文件 `Hexo/_config.yml`，这样 Hexo 才知道要将你的站点同步到哪里。
+部署前要编辑 Hexo 站点配置文件 `Hexo/_config.yml`，这样 Hexo 才知道要将你的站点同步到哪里；下面的`repository:`后面记得替换成自己的 GitHub 仓库。
 
 ```bash
 deploy:
@@ -65,7 +69,7 @@ hexo clean
 hexo deploy
 或
 hexo d
-也可以重新生成静态文件部署
+也可以重新生成静态文件并部署
 hexo g -d
 ```
 

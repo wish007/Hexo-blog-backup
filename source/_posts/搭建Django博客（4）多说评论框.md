@@ -3,11 +3,16 @@ title: 搭建Django博客（4）多说评论框
 date: 2016-09-05 21:29:02
 categories: Django
 tags:
+- Django
 ---
 
 1. 注册[多说](http://duoshuo.com)账号，得到多说`short_name`
 
 2. 在`myblog/templates`文件夹新建`duoshuo.html`并加入代码
+
+
+<!--more-->
+
 
    ```javascript
    <!-- 多说评论框 start -->

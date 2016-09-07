@@ -3,6 +3,7 @@ title: 搭建Django博客（2）创建数据模型
 date: 2016-09-05 19:46:09
 categories: Django
 tags:
+- Django
 ---
 
 前面我们创建并连接了数据库，但我们没有向数据库写入任何数据，在 Django 中直接与数据库交互的是数据模型，可以通过数据模型实现对数据库的各种操作。
@@ -10,6 +11,10 @@ tags:
 # 创建博客文章的数据模型
 
 Django 中用`models.py`文件中的一个类表示数据库中的一张表，类中的属性表示数据库中的一列。因此，我们可以编辑`models.py`文件来创建数据库表。
+
+
+<!--more-->
+
 
 现在我们来创建一个`Article`类，类中的`title` `category` `publish_time` `content`属性分别对应数据库中的一个列。
 
