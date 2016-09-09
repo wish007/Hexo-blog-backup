@@ -60,6 +60,14 @@ time_format: HH:mm:ss
 ## Set per_page to 0 to disable pagination
 per_page: 5
 pagination_dir: page
+index_generator:
+  per_page: 5
+archive_generator:
+  per_page: 50
+  yearly: true
+  monthly: true
+tag_generator:
+  per_page: 20
 
 duoshuo_shortname: wish007
 

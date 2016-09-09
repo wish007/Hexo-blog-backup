@@ -1,10 +1,14 @@
 ---
-title: 搭建Django博客（7）Django 博客搭建总结
+title: 搭建Django博客（7）Django博客搭建总结
 date: 2016-09-05 21:34:48
 categories: Django
 tags:
 - Django
 ---
+
+# 项目地址
+
+[GitHub wish007/django_blog](https://github.com/wish007/django_blog)
 
 # 效果展示
 
