@@ -8,7 +8,7 @@ tags:
 
 # 项目地址
 
-[GitHub wish007/django_blog](https://github.com/wish007/django_blog)
+[GitHub - wish007/django_blog](https://github.com/wish007/django_blog)
 
 # 效果展示
 
