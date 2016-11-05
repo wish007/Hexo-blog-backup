@@ -60,6 +60,25 @@
   ​
 
 
+# 更换主题
+
+- Hexo 官网展示了许多[可选主题](https://hexo.io/themes/)
+
+- 例如挑选了主题：**hexo-theme-next**
+
+  进入 Hexo 文件夹下的 themes 目录，将该主题的 GitHub 仓库下载到 themes 目录
+
+  ```bash
+  git clone https://github.com/iissnan/hexo-theme-next
+  ```
+
+- 修改 Hexo 配置文件
+
+  ```bash
+  theme: hexo-theme-next
+  ```
+
+
 
 ## 部署到 GitHub Pages
 
@@ -78,7 +97,9 @@
   $ hexo deploy
   ```
 
-  浏览器登录 http://[GitHub账户].github.io/ 即可查看效果
+- 浏览器登录 https://[GitHub账户].github.io/ 即可查看效果
+
+  我的 GitHub Pages ：[wish007.github.io](https://wish007.github.io/)
 
   ​
 
