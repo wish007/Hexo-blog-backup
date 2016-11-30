@@ -106,9 +106,15 @@ tags:
   stok = json.loads(response.text)['stok']
   ```
 
-- 获得 stok 后就可以将它加入请求 URL 中获取数据了；例如获取用户当前的上传速度、下载速度、限速信息等。返回的信息为 JSON 格式数据，可以解析做格式化处理增强可读性。
+- 获得 stok 后就可以将它加入请求 URL 中获取数据了
 
-  {% asset_img 获取数据.png %}
+  例如获取用户当前的上传速度、下载速度、限速信息等；返回的信息为 JSON 格式数据，可以解析做格式化处理增强可读性。
+
+  {% asset_img 获取数据.png 获取数据 %}
+
+  ​
+
+  **获取数据代码：**
 
   ```python
   stok = json.loads(response.text)['stok']
@@ -117,6 +123,60 @@ tags:
   payload = '{"hosts_info":{"table":"host_info"},"method":"get"}'
   response = requests.post(url, data=payload, headers=headers)
   ```
+  ​
+
+  **返回的 JSON 数据：**
+
+  ```json
+  {
+      "hosts_info": {
+          "host_info": [
+              {
+                  "host_info_1": {
+                      "mac": "D4-45-9D-62-8E-2D",
+                      "up_speed": "45773",
+                      "ssid": "",
+                      "plan_rule": [],
+                      "ip": "192.168.1.100",
+                      "type": "0",
+                      "is_cur_host": "0",
+                      "cfg_valid": "1",
+                      "blocked": "0",
+                      "down_limit": "0",
+                      "down_speed": "808",
+                      "hostname": "hehe",
+                      "up_limit": "0"
+                  }
+              },
+              {
+                  "host_info_2": {
+                      "mac": "5A-54-33-0C-92-2D",
+                      "up_speed": "59",
+                      "ssid": "aaa",
+                      "plan_rule": [],
+                      "wifi_mode": "0",
+                      "ip": "192.168.1.98",
+                      "type": "1",
+                      "is_cur_host": "1",
+                      "cfg_valid": "1",
+                      "blocked": "0",
+                      "down_limit": "0",
+                      "down_speed": "70",
+                      "hostname": "HaHa",
+                      "up_limit": "0"
+                  }
+              }
+          ]
+      },
+      "error_code": 0
+  }
+  ```
+
+  对 JSON 数据进一步可视化处理后：
+
+  {% asset_img 抓取结果.png 抓取结果 %}
+
+  ​
 
   # More
 
