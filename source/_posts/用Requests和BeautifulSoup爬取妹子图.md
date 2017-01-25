@@ -35,9 +35,76 @@ tags:
 
 {% asset_img meizitu.png %}
 
-## 爬虫程序分为5个函数：
+## 爬虫代码：
 
-### collect_url()
+程序包含直接下载图片到本地的版本和保存图片链接到 SQLite 数据库的版本，后者已经使用面向对象的编程方法重写，重写后结构更加清晰，可以点击上面的项目地址查看。
+
+**重写后：**
+
+```python
+import requests
+from bs4 import BeautifulSoup
+import sqlite3
+
+header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
+          }
+
+class Meizitu():
+
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+
+    def url(self):
+        while self.start < self.end:
+            yield 'http://www.meizitu.com/a/%s.html' % self.start
+            self.start +=1
+
+    def picture(self, url):
+        r = requests.get(url, headers=header, timeout=30)
+        r.encoding = 'gb2312'
+        soup = BeautifulSoup(r.text, "html.parser")
+        try:
+            title = soup.title.string[:-6]
+            for links in soup.find_all(class_='postContent'):
+                for l in links.find_all('img'):
+                    link = l.get('src')
+                    yield title, link
+        except TypeError:
+            title = 'Empty'
+            link = 'Empty'
+            return title, link
+
+    def save(self, url, title, link):
+        cur.execute("INSERT INTO meizitu VALUES ('%s','%s','%s')" % (url,title,link))
+        print(url + ' 已写入数据库')
+
+if __name__ == '__main__':
+    mzt = Meizitu(500, 520)
+    conn = sqlite3.connect('meizitu.db')
+    cur = conn.cursor()
+    cur.execute('CREATE TABLE IF NOT EXISTS meizitu (page TEXT, title TEXT, url TEXT)')
+    try:
+        for url in mzt.url():
+            for title, link in mzt.picture(url):
+                mzt.save(url, title, link)
+    except KeyboardInterrupt:
+        cur.close()
+        conn.commit()
+        conn.close()
+```
+
+
+
+### meizitu.py 分为 5个函数
+
+- collect_url()
+- collect_picture_link()
+- create_directory()
+- download_picture()
+- run()
+
+#### collect_url()
 
 > 根据妹子图网站页面的 URL 规律，设置需要爬取的起止 URL，最后返回需要将要爬取的 URL 列表
 
@@ -57,7 +124,7 @@ def collect_url():
     return url_list
 ```
 
-### collect_picture_link()
+#### collect_picture_link()
 
 > 使用  Beautiful Soup 的`find_all`方法搜索 HTML 文档树，返回图片的 URL 列表
 
@@ -72,7 +139,7 @@ def collect_picture_link(soup):
     return picture_link_list
 ```
 
-### create_directory()
+#### create_directory()
 
 > 创建以网页标题为名称的文件夹来存放图片
 
@@ -93,7 +160,7 @@ def create_directory(url, soup):
     return dir
 ```
 
-### download_picture()
+#### download_picture()
 
 > 将图片保存到以网页标题为名称的文件夹
 
@@ -114,7 +181,7 @@ def download_picture(links, dir, header):
                 i = i + 1
 ```
 
-### run()
+#### run()
 
 > 程序的主函数。
 >
