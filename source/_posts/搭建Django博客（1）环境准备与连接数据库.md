@@ -1,7 +1,8 @@
 ---
 title: 搭建Django博客（1）环境准备与连接数据库
 date: 2016-09-05 18:46:00
-categories: Django
+categories: 
+- Django
 tags:
 - Django
 ---

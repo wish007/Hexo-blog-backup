@@ -44,6 +44,10 @@ tags:
 - `#`在MySQL中可用，但这个不是标准的SQL注释
 
 
+
+
+
+
 # SHOW语句
 
 | 语句                            | 作用                       |
@@ -59,6 +63,10 @@ tags:
 | USE <database>                | 选择/打开<database>数据库       |
 | HELP SHOW                     | 进一步了解SHOW，显示允许的SHOW命令    |
 
+
+
+
+
 # 常用关键字
 
 | 关键字      | 作用       |
@@ -69,6 +77,10 @@ tags:
 | DESC     | 降序排序     |
 | ASC      | 升序排序（默认） |
 | WHERE    | 数据过滤     |
+
+
+
+
 
 # SELECT语句
 
@@ -129,6 +141,10 @@ SELECT <column1>, <column2>, <column3>, FROM <table> ORDER BY <column4>, <column
 ```mysql
 SELECT <column1>, <column2>, <column3>, FROM <table> ORDER BY <column4> DESC;
 ```
+
+
+
+
 # WHERE子句
 
 ## 单WHERE子句
@@ -176,6 +192,10 @@ SELECT <column> FROM <tables> WHERE <column> NOT IN (5,10);
 
 > **MySQL 中只支持 NOT 对 IN、BETWEEN 和 EXISTS 子句取反**，这个**多数其他 DBMS 允许使用 NOT 对各种条件取反**有很大的差别。
 
+
+
+
+
 # 聚集函数
 
 **聚集函数** 指运行在行组上，计算和返回单个值的函数。
@@ -195,6 +215,10 @@ MySQL中常用的5个聚集函数有：
 使用AVG()返回products表中所有产品的平均价格：
 
 SELECT AVG(prod_price) AS avg_price FROM products;
+
+
+
+
 
 # GROUP BY & HAVING子句
 
@@ -239,6 +263,10 @@ GROUP BY order_num
 HAVING SUM(quantity*item_price) >= 50
 
 ORDER BY ordertotal
+
+
+
+
 
 # SELECT子句的顺序
 

@@ -80,3 +80,6 @@ class ArticleAdmin(admin.ModelAdmin):
 # Register your models here.
 admin.site.register(Article,ArticleAdmin)
 ```
+后台 Markdown 编辑器效果：
+
+{% asset_img markdown_editor.png %}

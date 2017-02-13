@@ -59,7 +59,7 @@ INSTALLED_APPS = [
 现在我们已经准备好将自定义的数据模型写入数据库：
 
 ```powershell
-$ python manage.py makemigratinons
+$ python manage.py makemigrations
 ```
 
 *注意：执行上面命令后，会在`myblog/blogapp/migrations`文件夹下创建一个 python 迁移文件，但数据模型此时并未写入数据库*

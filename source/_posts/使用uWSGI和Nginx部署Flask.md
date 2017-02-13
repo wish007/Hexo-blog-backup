@@ -13,9 +13,16 @@ tags:
 
 
 
-本项目分为以下三层架构，Web 框架为 Flask，WSGI 层选用 uWSGI ，Web 服务器采用 Nginx。
+本项目分为以下三层架构，Web 框架为 Flask，WSGI 层选用 [uWSGI](http://uwsgi-docs-cn.readthedocs.io/zh_CN/latest/WSGIquickstart.html) ，Web 服务器采用 Nginx。
 
 {% asset_img web.png Web框架、WSGI与Web服务器的三层关系 %}
+
+
+
+## 项目地址
+
+[GitHub - wish007/shadowsocks-flask](https://github.com/wish007/shadowsocks-flask)
+
 
 
 <!--more-->
@@ -33,6 +40,17 @@ pip3 install virtualenv
 
 ### 创建名为 flask 的虚拟环境
 
+> 注意：
+>
+> 下面创建虚拟环境命令的命令可能会报错，因为命令执行文件可能不在当前目录
+
+```bash
+virtualenv flask
+出现报错:
+-bash: virtualenv:command not found
+```
+正确的做法：
+
 1. 使用命令查找`virtualenv`安装目录
 
 ```bash
@@ -43,6 +61,8 @@ find / -name virtualenv
 
 2. 创建名为`flask`的虚拟环境命令
 
+
+
 ```bash
 /usr/local/python3/bin/virtualenv flask
 
@@ -52,17 +72,6 @@ New python executablein /root/env/flask/bin/python3
 Also creatingexecutable in /root/env/flask/bin/python
 Installing setuptools,pip, wheel...done.
 ```
-
-> 注意：
->
-> 下面创建虚拟环境命令的命令可能会报错，因为命令执行文件可能不在当前目录
->
-> ```bash
-> virtualenv flask
->
-> 出现报错:
-> -bash: virtualenv:command not found
-> ```
 
 
 
@@ -212,7 +221,7 @@ service nginx stop
 
 ## 安装supervisor
 
-安装完 uWSGI、Nginx 后，Nginx可以直接设置开机启动，但 uWSGI 不能直接设置开机启动，这里我选了 supervisor 来启动  uWSGI
+安装完 uWSGI、Nginx 后，Nginx可以直接设置开机启动，但 uWSGI 还不能直接开机启动，这里我用 Supervisor 来启动并守护  uWSGI 运行，在全局 Python 环境安装 Supervisor：
 
 ```bash
 pip install supervisor
