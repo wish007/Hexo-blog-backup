@@ -4,6 +4,8 @@ date: 2016-09-10 16:58:47
 categories: Python
 tags:
 - Python
+- Requests
+- BeautifulSoup
 - 爬虫
 ---
 
